@@ -1,0 +1,34 @@
+
+events = ['GW170817-v3', 'GW190521_074359-v1', 'GW190814-v2', 'GW190412-v3',
+          'GW190828_063405-v1', 'GW170814-v3', 'GW170608-v3', 'GW190408_181802-v1',
+          'GW190521-v3']
+
+rule stack:
+    input:
+        expand("events/{id}.png", id=events)
+    output:
+        "events/allevents.png"
+    run:
+        from PIL import Image
+        import numpy as np
+
+        # load all images to numpy arrays
+        images = [np.array(Image.open(imagefile)) for imagefile in input]
+        # stack the arrays vertically
+        stacked = np.vstack(images)
+        # convert stacked array to PIL image, then save 
+        Image.fromarray(stacked).save(output[0])
+
+rule plot:
+    input:
+        "events/{id}.json"
+    output:
+        "events/{id}.png"
+    shell:
+        "python plotsignal.py {wildcards.id} -C events"
+
+rule download:
+    output:
+        "events/{id}.json"
+    shell:
+        "python hdfdownload.py {wildcards.id} -C events"
