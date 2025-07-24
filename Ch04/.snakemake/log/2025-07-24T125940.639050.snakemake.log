@@ -1,0 +1,40 @@
+Assuming unrestricted shared filesystem usage.
+None
+host: codespaces-62e845
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 1 (use --cores to define parallelism)
+Rules claiming more threads will be scaled down.
+Job stats:
+job         count
+--------  -------
+download        1
+plot            1
+total           2
+
+Select jobs to execute...
+Execute 1 jobs...
+[Thu Jul 24 12:59:40 2025]
+localrule download:
+    output: events/GW170817-v3.json
+    jobid: 1
+    reason: Missing output files: events/GW170817-v3.json
+    wildcards: id=GW170817-v3
+    resources: tmpdir=/tmp
+[Thu Jul 24 12:59:48 2025]
+Finished jobid: 1 (Rule: download)
+1 of 2 steps (50%) done
+Select jobs to execute...
+Execute 1 jobs...
+[Thu Jul 24 12:59:48 2025]
+localrule plot:
+    input: events/GW170817-v3.json
+    output: events/GW170817-v3.png
+    jobid: 0
+    reason: Missing output files: events/GW170817-v3.png; Input files updated by another job: events/GW170817-v3.json
+    wildcards: id=GW170817-v3
+    resources: tmpdir=/tmp
+[Thu Jul 24 12:59:59 2025]
+Finished jobid: 0 (Rule: plot)
+2 of 2 steps (100%) done
+Complete log(s): /workspaces/python-for-engineers-and-scientists-2425360/Ch04/.snakemake/log/2025-07-24T125940.639050.snakemake.log

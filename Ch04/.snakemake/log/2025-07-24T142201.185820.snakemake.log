@@ -1,0 +1,522 @@
+Assuming unrestricted shared filesystem usage.
+None
+host: codespaces-62e845
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 4
+Rules claiming more threads will be scaled down.
+Job stats:
+job        count
+-------  -------
+find           1
+product       20
+sum           20
+total         41
+
+Select jobs to execute...
+Execute 4 jobs...
+[Thu Jul 24 14:22:01 2025]
+localrule sum:
+    output: work/17_sum.txt
+    jobid: 34
+    reason: Missing output files: work/17_sum.txt
+    wildcards: n=17
+    resources: tmpdir=/tmp
+[Thu Jul 24 14:22:01 2025]
+localrule sum:
+    output: work/2_sum.txt
+    jobid: 4
+    reason: Missing output files: work/2_sum.txt
+    wildcards: n=2
+    resources: tmpdir=/tmp
+[Thu Jul 24 14:22:01 2025]
+localrule sum:
+    output: work/16_sum.txt
+    jobid: 32
+    reason: Missing output files: work/16_sum.txt
+    wildcards: n=16
+    resources: tmpdir=/tmp
+[Thu Jul 24 14:22:01 2025]
+localrule sum:
+    output: work/7_sum.txt
+    jobid: 14
+    reason: Missing output files: work/7_sum.txt
+    wildcards: n=7
+    resources: tmpdir=/tmp
+Select jobs to execute...
+[Thu Jul 24 14:22:04 2025]
+Finished jobid: 4 (Rule: sum)
+1 of 41 steps (2%) done
+Execute 1 jobs...
+[Thu Jul 24 14:22:04 2025]
+localrule product:
+    input: work/2_sum.txt
+    output: work/2_product.txt
+    jobid: 3
+    reason: Missing output files: work/2_product.txt; Input files updated by another job: work/2_sum.txt
+    wildcards: n=2
+    resources: tmpdir=/tmp
+[Thu Jul 24 14:22:04 2025]
+Finished jobid: 14 (Rule: sum)
+2 of 41 steps (5%) done
+Select jobs to execute...
+Execute 1 jobs...
+[Thu Jul 24 14:22:04 2025]
+localrule product:
+    input: work/7_sum.txt
+    output: work/7_product.txt
+    jobid: 13
+    reason: Missing output files: work/7_product.txt; Input files updated by another job: work/7_sum.txt
+    wildcards: n=7
+    resources: tmpdir=/tmp
+[Thu Jul 24 14:22:04 2025]
+Finished jobid: 32 (Rule: sum)
+3 of 41 steps (7%) done
+Select jobs to execute...
+Execute 1 jobs...
+[Thu Jul 24 14:22:04 2025]
+localrule product:
+    input: work/16_sum.txt
+    output: work/16_product.txt
+    jobid: 31
+    reason: Missing output files: work/16_product.txt; Input files updated by another job: work/16_sum.txt
+    wildcards: n=16
+    resources: tmpdir=/tmp
+[Thu Jul 24 14:22:04 2025]
+Finished jobid: 34 (Rule: sum)
+4 of 41 steps (10%) done
+Select jobs to execute...
+Execute 1 jobs...
+[Thu Jul 24 14:22:04 2025]
+localrule product:
+    input: work/17_sum.txt
+    output: work/17_product.txt
+    jobid: 33
+    reason: Missing output files: work/17_product.txt; Input files updated by another job: work/17_sum.txt
+    wildcards: n=17
+    resources: tmpdir=/tmp
+Select jobs to execute...
+[Thu Jul 24 14:22:07 2025]
+Finished jobid: 3 (Rule: product)
+5 of 41 steps (12%) done
+Execute 1 jobs...
+[Thu Jul 24 14:22:07 2025]
+localrule sum:
+    output: work/8_sum.txt
+    jobid: 16
+    reason: Missing output files: work/8_sum.txt
+    wildcards: n=8
+    resources: tmpdir=/tmp
+Select jobs to execute...
+[Thu Jul 24 14:22:07 2025]
+Finished jobid: 13 (Rule: product)
+6 of 41 steps (15%) done
+Execute 1 jobs...
+[Thu Jul 24 14:22:07 2025]
+localrule sum:
+    output: work/6_sum.txt
+    jobid: 12
+    reason: Missing output files: work/6_sum.txt
+    wildcards: n=6
+    resources: tmpdir=/tmp
+Select jobs to execute...
+[Thu Jul 24 14:22:07 2025]
+Finished jobid: 31 (Rule: product)
+7 of 41 steps (17%) done
+Execute 1 jobs...
+[Thu Jul 24 14:22:07 2025]
+localrule sum:
+    output: work/19_sum.txt
+    jobid: 38
+    reason: Missing output files: work/19_sum.txt
+    wildcards: n=19
+    resources: tmpdir=/tmp
+[Thu Jul 24 14:22:07 2025]
+Finished jobid: 33 (Rule: product)
+8 of 41 steps (20%) done
+Select jobs to execute...
+Execute 1 jobs...
+[Thu Jul 24 14:22:07 2025]
+localrule sum:
+    output: work/10_sum.txt
+    jobid: 20
+    reason: Missing output files: work/10_sum.txt
+    wildcards: n=10
+    resources: tmpdir=/tmp
+Select jobs to execute...
+[Thu Jul 24 14:22:09 2025]
+Finished jobid: 16 (Rule: sum)
+9 of 41 steps (22%) done
+Execute 1 jobs...
+[Thu Jul 24 14:22:09 2025]
+localrule product:
+    input: work/8_sum.txt
+    output: work/8_product.txt
+    jobid: 15
+    reason: Missing output files: work/8_product.txt; Input files updated by another job: work/8_sum.txt
+    wildcards: n=8
+    resources: tmpdir=/tmp
+Select jobs to execute...
+[Thu Jul 24 14:22:10 2025]
+Finished jobid: 12 (Rule: sum)
+10 of 41 steps (24%) done
+Execute 1 jobs...
+[Thu Jul 24 14:22:10 2025]
+localrule product:
+    input: work/6_sum.txt
+    output: work/6_product.txt
+    jobid: 11
+    reason: Missing output files: work/6_product.txt; Input files updated by another job: work/6_sum.txt
+    wildcards: n=6
+    resources: tmpdir=/tmp
+Select jobs to execute...
+[Thu Jul 24 14:22:10 2025]
+Finished jobid: 20 (Rule: sum)
+11 of 41 steps (27%) done
+Execute 1 jobs...
+[Thu Jul 24 14:22:10 2025]
+localrule product:
+    input: work/10_sum.txt
+    output: work/10_product.txt
+    jobid: 19
+    reason: Missing output files: work/10_product.txt; Input files updated by another job: work/10_sum.txt
+    wildcards: n=10
+    resources: tmpdir=/tmp
+[Thu Jul 24 14:22:10 2025]
+Finished jobid: 38 (Rule: sum)
+12 of 41 steps (29%) done
+Select jobs to execute...
+Execute 1 jobs...
+[Thu Jul 24 14:22:10 2025]
+localrule product:
+    input: work/19_sum.txt
+    output: work/19_product.txt
+    jobid: 37
+    reason: Missing output files: work/19_product.txt; Input files updated by another job: work/19_sum.txt
+    wildcards: n=19
+    resources: tmpdir=/tmp
+Select jobs to execute...
+[Thu Jul 24 14:22:12 2025]
+Finished jobid: 15 (Rule: product)
+13 of 41 steps (32%) done
+Execute 1 jobs...
+[Thu Jul 24 14:22:12 2025]
+localrule sum:
+    output: work/4_sum.txt
+    jobid: 8
+    reason: Missing output files: work/4_sum.txt
+    wildcards: n=4
+    resources: tmpdir=/tmp
+Select jobs to execute...
+[Thu Jul 24 14:22:13 2025]
+Finished jobid: 11 (Rule: product)
+14 of 41 steps (34%) done
+Execute 1 jobs...
+[Thu Jul 24 14:22:13 2025]
+localrule sum:
+    output: work/14_sum.txt
+    jobid: 28
+    reason: Missing output files: work/14_sum.txt
+    wildcards: n=14
+    resources: tmpdir=/tmp
+Select jobs to execute...
+[Thu Jul 24 14:22:13 2025]
+Finished jobid: 37 (Rule: product)
+15 of 41 steps (37%) done
+Execute 1 jobs...
+[Thu Jul 24 14:22:13 2025]
+localrule sum:
+    output: work/12_sum.txt
+    jobid: 24
+    reason: Missing output files: work/12_sum.txt
+    wildcards: n=12
+    resources: tmpdir=/tmp
+Select jobs to execute...
+[Thu Jul 24 14:22:13 2025]
+Finished jobid: 19 (Rule: product)
+16 of 41 steps (39%) done
+Execute 1 jobs...
+[Thu Jul 24 14:22:13 2025]
+localrule sum:
+    output: work/18_sum.txt
+    jobid: 36
+    reason: Missing output files: work/18_sum.txt
+    wildcards: n=18
+    resources: tmpdir=/tmp
+Select jobs to execute...
+[Thu Jul 24 14:22:14 2025]
+Finished jobid: 8 (Rule: sum)
+17 of 41 steps (41%) done
+Execute 1 jobs...
+[Thu Jul 24 14:22:14 2025]
+localrule product:
+    input: work/4_sum.txt
+    output: work/4_product.txt
+    jobid: 7
+    reason: Missing output files: work/4_product.txt; Input files updated by another job: work/4_sum.txt
+    wildcards: n=4
+    resources: tmpdir=/tmp
+Select jobs to execute...
+[Thu Jul 24 14:22:15 2025]
+Finished jobid: 28 (Rule: sum)
+18 of 41 steps (44%) done
+Execute 1 jobs...
+[Thu Jul 24 14:22:15 2025]
+localrule product:
+    input: work/14_sum.txt
+    output: work/14_product.txt
+    jobid: 27
+    reason: Missing output files: work/14_product.txt; Input files updated by another job: work/14_sum.txt
+    wildcards: n=14
+    resources: tmpdir=/tmp
+Select jobs to execute...
+[Thu Jul 24 14:22:15 2025]
+Finished jobid: 24 (Rule: sum)
+19 of 41 steps (46%) done
+Execute 1 jobs...
+[Thu Jul 24 14:22:15 2025]
+localrule product:
+    input: work/12_sum.txt
+    output: work/12_product.txt
+    jobid: 23
+    reason: Missing output files: work/12_product.txt; Input files updated by another job: work/12_sum.txt
+    wildcards: n=12
+    resources: tmpdir=/tmp
+Select jobs to execute...
+[Thu Jul 24 14:22:16 2025]
+Finished jobid: 36 (Rule: sum)
+20 of 41 steps (49%) done
+Execute 1 jobs...
+[Thu Jul 24 14:22:16 2025]
+localrule product:
+    input: work/18_sum.txt
+    output: work/18_product.txt
+    jobid: 35
+    reason: Missing output files: work/18_product.txt; Input files updated by another job: work/18_sum.txt
+    wildcards: n=18
+    resources: tmpdir=/tmp
+Select jobs to execute...
+[Thu Jul 24 14:22:16 2025]
+Finished jobid: 7 (Rule: product)
+21 of 41 steps (51%) done
+Execute 1 jobs...
+[Thu Jul 24 14:22:16 2025]
+localrule sum:
+    output: work/9_sum.txt
+    jobid: 18
+    reason: Missing output files: work/9_sum.txt
+    wildcards: n=9
+    resources: tmpdir=/tmp
+Select jobs to execute...
+[Thu Jul 24 14:22:18 2025]
+Finished jobid: 27 (Rule: product)
+22 of 41 steps (54%) done
+Execute 1 jobs...
+[Thu Jul 24 14:22:18 2025]
+localrule sum:
+    output: work/20_sum.txt
+    jobid: 40
+    reason: Missing output files: work/20_sum.txt
+    wildcards: n=20
+    resources: tmpdir=/tmp
+Select jobs to execute...
+[Thu Jul 24 14:22:18 2025]
+Finished jobid: 23 (Rule: product)
+23 of 41 steps (56%) done
+Execute 1 jobs...
+[Thu Jul 24 14:22:18 2025]
+localrule sum:
+    output: work/3_sum.txt
+    jobid: 6
+    reason: Missing output files: work/3_sum.txt
+    wildcards: n=3
+    resources: tmpdir=/tmp
+Select jobs to execute...
+[Thu Jul 24 14:22:19 2025]
+Finished jobid: 35 (Rule: product)
+24 of 41 steps (59%) done
+Execute 1 jobs...
+[Thu Jul 24 14:22:19 2025]
+localrule sum:
+    output: work/11_sum.txt
+    jobid: 22
+    reason: Missing output files: work/11_sum.txt
+    wildcards: n=11
+    resources: tmpdir=/tmp
+Select jobs to execute...
+[Thu Jul 24 14:22:19 2025]
+Finished jobid: 18 (Rule: sum)
+25 of 41 steps (61%) done
+Execute 1 jobs...
+[Thu Jul 24 14:22:19 2025]
+localrule product:
+    input: work/9_sum.txt
+    output: work/9_product.txt
+    jobid: 17
+    reason: Missing output files: work/9_product.txt; Input files updated by another job: work/9_sum.txt
+    wildcards: n=9
+    resources: tmpdir=/tmp
+Select jobs to execute...
+[Thu Jul 24 14:22:20 2025]
+Finished jobid: 40 (Rule: sum)
+26 of 41 steps (63%) done
+Execute 1 jobs...
+[Thu Jul 24 14:22:20 2025]
+localrule product:
+    input: work/20_sum.txt
+    output: work/20_product.txt
+    jobid: 39
+    reason: Missing output files: work/20_product.txt; Input files updated by another job: work/20_sum.txt
+    wildcards: n=20
+    resources: tmpdir=/tmp
+Select jobs to execute...
+[Thu Jul 24 14:22:21 2025]
+Finished jobid: 6 (Rule: sum)
+27 of 41 steps (66%) done
+Execute 1 jobs...
+[Thu Jul 24 14:22:21 2025]
+localrule product:
+    input: work/3_sum.txt
+    output: work/3_product.txt
+    jobid: 5
+    reason: Missing output files: work/3_product.txt; Input files updated by another job: work/3_sum.txt
+    wildcards: n=3
+    resources: tmpdir=/tmp
+Select jobs to execute...
+[Thu Jul 24 14:22:21 2025]
+Finished jobid: 22 (Rule: sum)
+28 of 41 steps (68%) done
+Execute 1 jobs...
+[Thu Jul 24 14:22:21 2025]
+localrule product:
+    input: work/11_sum.txt
+    output: work/11_product.txt
+    jobid: 21
+    reason: Missing output files: work/11_product.txt; Input files updated by another job: work/11_sum.txt
+    wildcards: n=11
+    resources: tmpdir=/tmp
+Select jobs to execute...
+[Thu Jul 24 14:22:21 2025]
+Finished jobid: 17 (Rule: product)
+29 of 41 steps (71%) done
+Execute 1 jobs...
+[Thu Jul 24 14:22:21 2025]
+localrule sum:
+    output: work/5_sum.txt
+    jobid: 10
+    reason: Missing output files: work/5_sum.txt
+    wildcards: n=5
+    resources: tmpdir=/tmp
+Select jobs to execute...
+[Thu Jul 24 14:22:22 2025]
+Finished jobid: 39 (Rule: product)
+30 of 41 steps (73%) done
+Execute 1 jobs...
+[Thu Jul 24 14:22:22 2025]
+localrule sum:
+    output: work/15_sum.txt
+    jobid: 30
+    reason: Missing output files: work/15_sum.txt
+    wildcards: n=15
+    resources: tmpdir=/tmp
+Select jobs to execute...
+[Thu Jul 24 14:22:23 2025]
+Finished jobid: 5 (Rule: product)
+31 of 41 steps (76%) done
+Execute 1 jobs...
+[Thu Jul 24 14:22:23 2025]
+localrule sum:
+    output: work/13_sum.txt
+    jobid: 26
+    reason: Missing output files: work/13_sum.txt
+    wildcards: n=13
+    resources: tmpdir=/tmp
+Select jobs to execute...
+[Thu Jul 24 14:22:24 2025]
+Finished jobid: 21 (Rule: product)
+32 of 41 steps (78%) done
+Execute 1 jobs...
+[Thu Jul 24 14:22:24 2025]
+localrule sum:
+    output: work/1_sum.txt
+    jobid: 2
+    reason: Missing output files: work/1_sum.txt
+    wildcards: n=1
+    resources: tmpdir=/tmp
+[Thu Jul 24 14:22:24 2025]
+Finished jobid: 10 (Rule: sum)
+33 of 41 steps (80%) done
+Select jobs to execute...
+Execute 1 jobs...
+[Thu Jul 24 14:22:24 2025]
+localrule product:
+    input: work/5_sum.txt
+    output: work/5_product.txt
+    jobid: 9
+    reason: Missing output files: work/5_product.txt; Input files updated by another job: work/5_sum.txt
+    wildcards: n=5
+    resources: tmpdir=/tmp
+[Thu Jul 24 14:22:25 2025]
+Finished jobid: 30 (Rule: sum)
+34 of 41 steps (83%) done
+Select jobs to execute...
+Execute 1 jobs...
+[Thu Jul 24 14:22:25 2025]
+localrule product:
+    input: work/15_sum.txt
+    output: work/15_product.txt
+    jobid: 29
+    reason: Missing output files: work/15_product.txt; Input files updated by another job: work/15_sum.txt
+    wildcards: n=15
+    resources: tmpdir=/tmp
+[Thu Jul 24 14:22:25 2025]
+Finished jobid: 26 (Rule: sum)
+35 of 41 steps (85%) done
+Select jobs to execute...
+Execute 1 jobs...
+[Thu Jul 24 14:22:25 2025]
+localrule product:
+    input: work/13_sum.txt
+    output: work/13_product.txt
+    jobid: 25
+    reason: Missing output files: work/13_product.txt; Input files updated by another job: work/13_sum.txt
+    wildcards: n=13
+    resources: tmpdir=/tmp
+[Thu Jul 24 14:22:26 2025]
+Finished jobid: 2 (Rule: sum)
+36 of 41 steps (88%) done
+Select jobs to execute...
+Execute 1 jobs...
+[Thu Jul 24 14:22:26 2025]
+localrule product:
+    input: work/1_sum.txt
+    output: work/1_product.txt
+    jobid: 1
+    reason: Missing output files: work/1_product.txt; Input files updated by another job: work/1_sum.txt
+    wildcards: n=1
+    resources: tmpdir=/tmp
+[Thu Jul 24 14:22:26 2025]
+Finished jobid: 9 (Rule: product)
+37 of 41 steps (90%) done
+[Thu Jul 24 14:22:27 2025]
+Finished jobid: 29 (Rule: product)
+38 of 41 steps (93%) done
+[Thu Jul 24 14:22:28 2025]
+Finished jobid: 25 (Rule: product)
+39 of 41 steps (95%) done
+[Thu Jul 24 14:22:28 2025]
+Finished jobid: 1 (Rule: product)
+40 of 41 steps (98%) done
+Select jobs to execute...
+Execute 1 jobs...
+[Thu Jul 24 14:22:28 2025]
+localrule find:
+    input: work/1_product.txt, work/2_product.txt, work/3_product.txt, work/4_product.txt, work/5_product.txt, work/6_product.txt, work/7_product.txt, work/8_product.txt, work/9_product.txt, work/10_product.txt, work/11_product.txt, work/12_product.txt, work/13_product.txt, work/14_product.txt, work/15_product.txt, work/16_product.txt, work/17_product.txt, work/18_product.txt, work/19_product.txt, work/20_product.txt
+    output: work/perfect.txt
+    jobid: 0
+    reason: Missing output files: work/perfect.txt; Input files updated by another job: work/15_product.txt, work/2_product.txt, work/11_product.txt, work/16_product.txt, work/18_product.txt, work/7_product.txt, work/9_product.txt, work/4_product.txt, work/10_product.txt, work/19_product.txt, work/5_product.txt, work/17_product.txt, work/1_product.txt, work/20_product.txt, work/6_product.txt, work/14_product.txt, work/3_product.txt, work/12_product.txt, work/8_product.txt, work/13_product.txt
+    resources: tmpdir=/tmp
+[Thu Jul 24 14:22:30 2025]
+Finished jobid: 0 (Rule: find)
+41 of 41 steps (100%) done
+Complete log(s): /workspaces/python-for-engineers-and-scientists-2425360/Ch04/.snakemake/log/2025-07-24T142201.185820.snakemake.log
